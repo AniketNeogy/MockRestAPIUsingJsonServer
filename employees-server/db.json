@@ -1,0 +1,34 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Aniket",
+      "last_name": "Neogy",
+      "email": "aniket.neogy@imaginea.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Pooja",
+      "last_name": "Patel",
+      "email": "pooja.patel@imaginea.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Abhimanyu",
+      "last_name": "Soni",
+      "email": "abhimaniu.soni@imaginea.com"
+    },
+    {
+      "id": 4,
+      "first_name": "Revanth",
+      "last_name": "M V S",
+      "email": "revanth.mvs@imaginea.com"
+    },
+    {
+      "id": 5,
+      "first_name": "osbanna",
+      "last_name": "komera",
+      "email": "obanna.komera@imaginea.com"
+    }
+  ]
+}
