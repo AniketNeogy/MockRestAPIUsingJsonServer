@@ -21,7 +21,7 @@ Now to automate the Fake API data instead on manually editing the db.json everyt
 - copy employee.js file to the same directory as above
 - run ```npm install faker```
 
-Refer ```https://youtu.be/x3NAo8zqdmo``` fro step by step tutorial
+Refer https://youtu.be/x3NAo8zqdmo fro step by step tutorial
 
 Author: Aniket
 Email: aniket.neogy@imaginea.com
