@@ -5,7 +5,7 @@ Repository contains the 2 file for fake REST API creation
 Setup Instruction
 
 - Install Node Js on your system
-- Install Json server using the npm install - ```npm install json-server```
+- Install Json server using the npm install - ```npm install -g json-server```
 
 
 Usage Instructions
