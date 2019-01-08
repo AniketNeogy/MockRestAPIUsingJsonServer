@@ -19,7 +19,7 @@ Now to automate the Fake API data instead on manually editing the db.json everyt
 - run ```npm init``` in the cmd 
 - run ```npm install faker```
 - copy employee.js file to the same directory as above
-- run ```npm install faker```
+- run ```json-server employee.js```
 
 Refer https://youtu.be/x3NAo8zqdmo for step by step tutorial
 
