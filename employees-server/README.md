@@ -24,4 +24,4 @@ Now to automate the Fake API data instead on manually editing the db.json everyt
 Refer https://youtu.be/x3NAo8zqdmo for step by step tutorial
 
 Author: Aniket
-Email: aniket.neogy@imaginea.com
+Email: aniketneogy19@gmail.com
