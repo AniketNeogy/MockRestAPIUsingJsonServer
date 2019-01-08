@@ -10,40 +10,42 @@ function generateUsers(){
 		var email = faker.internet.email();
 		var designation = faker.name.jobTitle();
 		var phoneNumber = faker.name.phoneNumber;
+		var companyName = faker.company.companyName();
 		var Address = [];
-		var Permanent_Address;
-		var Temporary_Address;
 		var Skills = [];
-		
-		
-		if(id%2==0){
-		Permanent_Address = {
-						"Address Line1": "Road 123, Gachibowli",
-						"Address Line2": "Indiranagar",
-						"City": "Hyderabad",
-						"State": "Telangana"
+		var streetName = faker.address.streetName();
+		var streetAddress = faker.address.streetAddress();
+		var country = faker.address.country();
+		var city = faker.address.city();
+		var state = faker.address.state();
+		var zipCode = faker.address.zipCode();
+		var Permanent_Address = {
+						"Address Line1": streetName,
+						"Address Line2": streetAddress,
+						"City": city,
+						"State": state,
+						"Country" : country,
+						"zipCode" : zipCode
 						};
-		Temporary_Address = {
-						"Address Line1": "Road 420, Mithila Nagar",
-						"Address Line2": "Banjara Hills",
-						"City": "Hyderabad",
-						"State": "Telangana"
-					};
+						
+		var streetName1 = faker.address.streetName();
+		var streetAddress1 = faker.address.streetAddress;
+		var country1 = faker.address.country();
+		var city1 = faker.address.city();
+		var state1 = faker.address.state();
+		var zipCode1 = faker.address.zipCode();
+		var Temporary_Address = {
+						"Address Line1": streetName1,
+						"Address Line2": streetAddress1,
+						"City": city1,
+						"State": state1,
+						"Country" : country1,
+						"zipCode" : zipCode1
+						};
+		if(id%2==0){
 		Skills.push("Java", "DevOps", "Python");
 		}
 		else{
-		Permanent_Address = {
-						"Address Line1": "Grand Terminal Road",
-						"Address Line2": "Kukatpally",
-						"City": "Hyderabad",
-						"State": "Telangana"
-						};
-		Temporary_Address = {
-						"Address Line1": "Road 56, Santosh Colony",
-						"Address Line2": "SR Nagar",
-						"City": "Hyderabad",
-						"State": "Telangana"
-					};
 		Skills.push("Java", "Selenium", "Rest Assured","Selenium");
 		}
 		
@@ -57,7 +59,8 @@ function generateUsers(){
 			"first_name" : firstName,
 			"last_name" : lastName,
 			"email" : email,
-			"Designation" : designation,
+			"companyName" : companyName,
+			"designation" : designation,
 			"phoneNumber" : phoneNumber,
 			"Address": Address,
 			"Skills" : Skills
