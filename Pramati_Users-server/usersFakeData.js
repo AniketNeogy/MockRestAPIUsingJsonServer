@@ -1,9 +1,13 @@
 var faker = require('faker')
 
-function generateUsers(){
+function generateMockAPI(){
 	var Users = []
-	
-	for (var id = 0; id < 15; id++){
+	var Admins = []
+	var Clients = []
+	var userCount = 100
+	var clientCount = 25
+	var adminCount = 10
+	for (var id = 0; id < userCount; id++){
 		
 		var firstName = faker.name.firstName();
 		var lastName = faker.name.lastName();
@@ -11,6 +15,7 @@ function generateUsers(){
 		var designation = faker.name.jobTitle();
 		var phoneNumber = faker.name.phoneNumber;
 		var companyName = faker.company.companyName();
+		var department = faker.commerce.department();
 		var Address = [];
 		var Skills = [];
 		var streetName = faker.address.streetName();
@@ -55,18 +60,62 @@ function generateUsers(){
 					  "Temporary Address" : Temporary_Address});
 		
 		Users.push({
-			"id":id,
+			"id": "User" +"-" + id,
 			"first_name" : firstName,
 			"last_name" : lastName,
 			"email" : email,
 			"companyName" : companyName,
+			"department" : department,
 			"designation" : designation,
 			"phoneNumber" : phoneNumber,
 			"Address": Address,
-			"Skills" : Skills
+			"Skills" : Skills,
+			"message" : department+" department user data."
 		})
 	}
-	return{"Users" : Users}
+	for (var id = 0; id < clientCount; id++){
+		var clientName = faker.company.companyName();
+		var clientOfficeAddress = faker.address.secondaryAddress() + " , " + faker.address.city()+ " , " + faker.address.state()+ " , " + faker.address.country();
+		var clientCountry = faker.address.country();
+		var portfolio = faker.finance.account();
+		var contactInfo = faker.internet.email();
+		var clientContactNumber = faker.phone.phoneNumber();
+		
+		Clients.push({
+			"id": "Client" +"-" + id,
+			"Name" : clientName,
+			"portfolio" : portfolio,
+			"country" : clientCountry,
+			"email" : contactInfo,
+			"phoneNumber" : clientContactNumber,
+			"Address": clientOfficeAddress,
+			"message" : "Client data successfully retrieved."
+		})
+	}
+	
+	for (var id = 0; id < adminCount; id++){
+		var firstName = faker.name.firstName();
+		var lastName = faker.name.lastName();
+		var email = faker.internet.email();
+		var Permanent_Address = {
+						"Address Line1": faker.address.streetName(),
+						"Address Line2": faker.address.streetAddress(),
+						"City": faker.address.city(),
+						"State": faker.address.state(),
+						"Country" : faker.address.country(),
+						"zipCode" : faker.address.zipCode()
+						};
+		Admins.push({
+			"id": "Adm" +"-" + id,
+			"firstName" : firstName,
+			"lastName" : lastName,
+			"email" : email,
+			"Address": Permanent_Address,
+			"message" : "Admin data successfully retrieved."
+		})
+	}
+	
+	return{"Users" : Users, "Clients" : Clients, "Admins" : Admins}
 }
 
-module.exports = generateUsers
+module.exports = generateMockAPI
